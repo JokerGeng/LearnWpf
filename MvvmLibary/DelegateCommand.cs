@@ -8,55 +8,44 @@ using System.Windows.Input;
 
 namespace MvvmLibary
 {
-    public class DelegateCommand : ICommand
+    public class DelegateCommand : DelegateCommandBase
     {
-        private Action _executeMethod = null;
-        Func<object, bool> _canExecuteMethod = null;
-        private SynchronizationContext _synchronizationContext;
-        public DelegateCommand(Action execute)
+        Action _executeMethod;
+        Func<bool> _canExecuteMethod;
+
+        public DelegateCommand(Action execute) : this(execute, () => true)
         {
-            _executeMethod = execute;
-            _synchronizationContext = SynchronizationContext.Current;
+
         }
 
-        public DelegateCommand(Action execute, Func<object, bool> canExecute)
+        public DelegateCommand(Action execute,Func<bool> canExecute):base()
         {
+            if (execute == null || canExecute == null)
+            {
+                throw new ArgumentNullException(nameof(execute));
+            }
             _executeMethod = execute;
             _canExecuteMethod = canExecute;
-            _synchronizationContext = SynchronizationContext.Current;
         }
 
-        public event EventHandler CanExecuteChanged;
-
-        public bool CanExecute(object parameter)
+        public override bool CanExecute(object parameter)
         {
-            if(_canExecuteMethod!=null)
-            {
-                return _canExecuteMethod(parameter);
-            }
-            return true;
+            return _canExecuteMethod();
         }
 
-        public void Execute(object parameter)
+        public override void Execute(object parameter)
         {
-            _executeMethod?.Invoke();
+            _executeMethod();
         }
 
-        public void RaiseCanExecuteChanged()
+        public bool CanExecute()
         {
-            OnCanExecuteChanged();
+            return _canExecuteMethod();
         }
 
-        protected virtual void OnCanExecuteChanged()
+        public void Execute()
         {
-            var handler = CanExecuteChanged;
-            if (handler != null)
-            {
-                if (_synchronizationContext != null && _synchronizationContext != SynchronizationContext.Current)
-                    _synchronizationContext.Post((o) => handler.Invoke(this, EventArgs.Empty), null);
-                else
-                    handler.Invoke(this, EventArgs.Empty);
-            }
+            _executeMethod();
         }
     }
 }

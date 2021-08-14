@@ -8,41 +8,23 @@ using System.Windows.Input;
 
 namespace MvvmLibary
 {
-    public class DelegateCommand<T> : ICommand
+    public class DelegateCommand<T> : DelegateCommandBase
     {
         private Action<T> _executeMethod = null;
         Func<T, bool> _canExecuteMethod = null;
-        private SynchronizationContext _synchronizationContext;
-        public DelegateCommand(Action<T> execute)
+        public DelegateCommand(Action<T> execute):this(execute, (o)=>true)
         {
-            _executeMethod = execute;
-            _synchronizationContext = SynchronizationContext.Current;
         }
-        public DelegateCommand(Action<T> execute, Func<T, bool> canExecute)
+        public DelegateCommand(Action<T> execute, Func<T, bool> canExecute):base()
         {
+            if (execute == null || canExecute == null)
+            {
+                throw new ArgumentNullException(nameof(execute));
+            }
             _executeMethod = execute;
             _canExecuteMethod = canExecute;
-            _synchronizationContext = SynchronizationContext.Current;
         }
 
-        public event EventHandler CanExecuteChanged;
-
-        public bool CanExecute(object parameter)
-        {
-            if(_canExecuteMethod!=null)
-            {
-                return _canExecuteMethod((T)parameter);
-            }
-            return true;
-        }
-
-        public void Execute(object parameter)
-        {
-            if(CanExecute(parameter))
-            {
-                _executeMethod?.Invoke((T)parameter);
-            }
-        }
         public void Execute(T parameter)
         {
             _executeMethod(parameter);
@@ -53,21 +35,14 @@ namespace MvvmLibary
             return _canExecuteMethod(parameter);
         }
 
-        public void RaiseCanExecuteChanged()
+        public override bool CanExecute(object parameter)
         {
-            OnCanExecuteChanged();
+            return _canExecuteMethod((T)parameter);
         }
 
-        protected virtual void OnCanExecuteChanged()
+        public override void Execute(object parameter)
         {
-            var handler = CanExecuteChanged;
-            if (handler != null)
-            {
-                if (_synchronizationContext != null && _synchronizationContext != SynchronizationContext.Current)
-                    _synchronizationContext.Post((o) => handler.Invoke(this, EventArgs.Empty), null);
-                else
-                    handler.Invoke(this, EventArgs.Empty);
-            }
+            _executeMethod((T)parameter);
         }
     }
 }
