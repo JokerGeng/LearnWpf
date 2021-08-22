@@ -34,9 +34,9 @@ namespace MvvmLibary
             OnCanExecuteChanged();
         }
 
-        public abstract bool CanExecute(object parameter);
+        protected abstract bool CanExecute(object parameter);
 
-        public abstract void Execute(object parameter);
+        protected abstract void Execute(object parameter);
 
         protected virtual void OnCanExecuteChanged()
         {

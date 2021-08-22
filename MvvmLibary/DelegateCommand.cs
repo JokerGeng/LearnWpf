@@ -28,12 +28,12 @@ namespace MvvmLibary
             _canExecuteMethod = canExecute;
         }
 
-        public override bool CanExecute(object parameter)
+        protected override bool CanExecute(object parameter)
         {
             return _canExecuteMethod();
         }
 
-        public override void Execute(object parameter)
+        protected override void Execute(object parameter)
         {
             _executeMethod();
         }
