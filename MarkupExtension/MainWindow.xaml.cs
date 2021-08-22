@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PasswordBind
+namespace MarkupExtension
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,7 +23,6 @@ namespace PasswordBind
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new ViewModel();
         }
     }
 }

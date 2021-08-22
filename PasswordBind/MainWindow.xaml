@@ -4,9 +4,22 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PasswordBind"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <StackPanel>
+        <StackPanel Margin="0 100 0 0" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Text="账号:" Foreground="Red" Width="30"/>
+            <TextBox Text="{Binding Account}" Foreground="Red" Width="100"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Text="密码:" Foreground="Red" Width="30"/>
+            <PasswordBox Foreground="Red"  Width="100" local:PasswordBoxHelper.Password="{Binding Password,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                <i:Interaction.Behaviors>
+                    <local:PasswordBoxBehavior/>
+                </i:Interaction.Behaviors>
+            </PasswordBox>
+        </StackPanel>
+        <Button Content="登录" Command="{Binding LoginCommand}" Width="100" Margin="5"/>
+    </StackPanel>
 </Window>
