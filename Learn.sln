@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeepButtonPressed", "KeepBu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderlineButton", "UnderlineButton\UnderlineButton.csproj", "{75BC10B5-CDA0-4670-9190-A9BDEA83F2B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectedTextFromTextBox", "SelectedTextFromTextBox\SelectedTextFromTextBox.csproj", "{4920B201-143B-4D63-A95E-57E41463DF08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{75BC10B5-CDA0-4670-9190-A9BDEA83F2B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75BC10B5-CDA0-4670-9190-A9BDEA83F2B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75BC10B5-CDA0-4670-9190-A9BDEA83F2B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4920B201-143B-4D63-A95E-57E41463DF08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4920B201-143B-4D63-A95E-57E41463DF08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4920B201-143B-4D63-A95E-57E41463DF08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4920B201-143B-4D63-A95E-57E41463DF08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
