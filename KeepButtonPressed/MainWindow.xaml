@@ -16,6 +16,9 @@
         <StackPanel>
             <Button x:Name="ViewA" Style="{DynamicResource ButtonStyle}" Content="ViewA" Command="{Binding MenuCommand}" CommandParameter="ViewA"/>
             <Button x:Name="ViewB" Style="{DynamicResource ButtonStyle}" Content="ViewB" Command="{Binding MenuCommand}" CommandParameter="ViewB"/>
+            <TextBox Height="30"/>
+            <TextBox Height="30"/>
+            <Button IsDefault="True" Height="50" Content="default button" Command="{Binding DefaultCommand}"/>
         </StackPanel>
         <ContentControl Grid.Column="1" prism:RegionManager.RegionName="MainRegion"/>
     </Grid>

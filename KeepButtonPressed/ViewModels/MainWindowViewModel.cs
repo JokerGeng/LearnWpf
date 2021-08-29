@@ -26,6 +26,16 @@ namespace KeepButtonPressed.ViewModels
             Navigate(parameter);
         }
 
+        //在该页面回车后将执行此命令
+        private DelegateCommand _defaultCommand;
+        public DelegateCommand DefaultCommand =>
+            _defaultCommand ?? (_defaultCommand = new DelegateCommand(ExecuteDefaultCommand));
+
+        void ExecuteDefaultCommand()
+        {
+            
+        }
+
         private void Navigate(string navigatePath)
         {
             if (navigatePath != null)
