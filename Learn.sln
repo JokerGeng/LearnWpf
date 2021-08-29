@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RawTouch", "RawTouch\RawTou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeepButtonPressed", "KeepButtonPressed\KeepButtonPressed.csproj", "{44442F9F-EC39-4904-9BE3-1B1A56837024}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderlineButton", "UnderlineButton\UnderlineButton.csproj", "{75BC10B5-CDA0-4670-9190-A9BDEA83F2B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{44442F9F-EC39-4904-9BE3-1B1A56837024}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44442F9F-EC39-4904-9BE3-1B1A56837024}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44442F9F-EC39-4904-9BE3-1B1A56837024}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75BC10B5-CDA0-4670-9190-A9BDEA83F2B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75BC10B5-CDA0-4670-9190-A9BDEA83F2B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75BC10B5-CDA0-4670-9190-A9BDEA83F2B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75BC10B5-CDA0-4670-9190-A9BDEA83F2B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
