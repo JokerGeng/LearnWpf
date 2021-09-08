@@ -11,9 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="office.jpg">
+    <SplashScreen Include="office.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
+    </SplashScreen>
   </ItemGroup>
 
 </Project>
