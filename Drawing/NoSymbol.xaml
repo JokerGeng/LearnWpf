@@ -1,0 +1,34 @@
+﻿<Window x:Class="Drawing.NoSymbol"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Drawing"
+        mc:Ignorable="d"
+        Title="NoSymbol" Height="321" Width="327">
+    <Grid>
+        <Path Fill="Red" Stroke="Yellow" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Path.Data>
+                <CombinedGeometry GeometryCombineMode="Union">
+                    <CombinedGeometry.Geometry1>
+                        <CombinedGeometry GeometryCombineMode="Exclude">
+                            <CombinedGeometry.Geometry1>
+                                <EllipseGeometry Center="50,50" RadiusX="50" RadiusY="50"/>
+                            </CombinedGeometry.Geometry1>
+                            <CombinedGeometry.Geometry2>
+                                <EllipseGeometry Center="50,50" RadiusX="40" RadiusY="40"/>
+                            </CombinedGeometry.Geometry2>
+                        </CombinedGeometry>
+                    </CombinedGeometry.Geometry1>
+                    <CombinedGeometry.Geometry2>
+                        <RectangleGeometry Rect="44 5 10 90">
+                            <RectangleGeometry.Transform>
+                                <RotateTransform Angle="45" CenterY="50" CenterX="50"/>
+                            </RectangleGeometry.Transform>
+                        </RectangleGeometry>
+                    </CombinedGeometry.Geometry2>
+                </CombinedGeometry>
+            </Path.Data>
+        </Path>
+    </Grid>
+</Window>
