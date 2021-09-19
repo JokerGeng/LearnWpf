@@ -23,9 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnderlineButton", "Underlin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SelectedTextFromTextBox", "SelectedTextFromTextBox\SelectedTextFromTextBox.csproj", "{4920B201-143B-4D63-A95E-57E41463DF08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransformDemo", "TransformDemo\TransformDemo.csproj", "{23E44075-AD59-4944-AA94-27E660C528CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransformDemo", "TransformDemo\TransformDemo.csproj", "{23E44075-AD59-4944-AA94-27E660C528CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drawing", "Drawing\Drawing.csproj", "{C0CA0765-D741-4A6F-9B37-40EE27CC69E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Drawing", "Drawing\Drawing.csproj", "{C0CA0765-D741-4A6F-9B37-40EE27CC69E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tab", "Tab\Tab.csproj", "{AE423792-E41D-435D-A5A2-F2C171378FFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{C0CA0765-D741-4A6F-9B37-40EE27CC69E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0CA0765-D741-4A6F-9B37-40EE27CC69E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0CA0765-D741-4A6F-9B37-40EE27CC69E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE423792-E41D-435D-A5A2-F2C171378FFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE423792-E41D-435D-A5A2-F2C171378FFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE423792-E41D-435D-A5A2-F2C171378FFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE423792-E41D-435D-A5A2-F2C171378FFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
