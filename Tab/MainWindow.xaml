@@ -8,13 +8,17 @@
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
         <TabControl TabStripPlacement="Left">
-            <local:ImageTabItem Source="images/copy.png" Style="{DynamicResource ImageTabItemStyle}" Header="Copy"/>
+            <local:ImageTabItem Source="images/copy.png" Style="{DynamicResource ImageTabItemStyle}" Header="Copy">
+                <ContentControl Content="HHH" Foreground="Red"/>
+            </local:ImageTabItem>
             <local:ImageTabItem Source="images/paste.png" Style="{DynamicResource ImageTabItemStyle}" Header="Paste"/>
             <local:ImageTabItem Source="images/save.png" Style="{DynamicResource ImageTabItemStyle}" Header="Save"/>
             <local:ImageTabItem Source="images/open.png" Style="{DynamicResource ImageTabItemStyle}" Header="Open"/>
             <TabItem Style="{DynamicResource TabItemStyle}" Header="Paste"/>
             <TabItem Style="{DynamicResource TabItemStyle}" Header="Save" IsEnabled="False"/>
-            <TabItem Style="{DynamicResource TabItemStyle}" Header="Open"/>
+            <TabItem  Style="{DynamicResource TabItemStyle}" Header="Open">
+                <ContentControl Content="hhhh"/>
+            </TabItem>
         </TabControl>
     </StackPanel>
 </Window>
