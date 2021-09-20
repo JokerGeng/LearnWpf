@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransformDemo", "TransformD
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Drawing", "Drawing\Drawing.csproj", "{C0CA0765-D741-4A6F-9B37-40EE27CC69E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tab", "Tab\Tab.csproj", "{AE423792-E41D-435D-A5A2-F2C171378FFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tab", "Tab\Tab.csproj", "{AE423792-E41D-435D-A5A2-F2C171378FFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreDatabase", "StoreDatabase\StoreDatabase.csproj", "{E1872DAB-1D96-4910-A38F-EFDFE1AB9100}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{AE423792-E41D-435D-A5A2-F2C171378FFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE423792-E41D-435D-A5A2-F2C171378FFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE423792-E41D-435D-A5A2-F2C171378FFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1872DAB-1D96-4910-A38F-EFDFE1AB9100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1872DAB-1D96-4910-A38F-EFDFE1AB9100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1872DAB-1D96-4910-A38F-EFDFE1AB9100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1872DAB-1D96-4910-A38F-EFDFE1AB9100}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
