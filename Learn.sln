@@ -29,7 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Drawing", "Drawing\Drawing.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tab", "Tab\Tab.csproj", "{AE423792-E41D-435D-A5A2-F2C171378FFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreDatabase", "StoreDatabase\StoreDatabase.csproj", "{E1872DAB-1D96-4910-A38F-EFDFE1AB9100}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoreDatabase", "StoreDatabase\StoreDatabase.csproj", "{E1872DAB-1D96-4910-A38F-EFDFE1AB9100}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingDataValidationVerify", "BindingDataValidationVerify\BindingDataValidationVerify.csproj", "{CEA18061-9BE9-4D4E-A174-E0B345AAA76D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{E1872DAB-1D96-4910-A38F-EFDFE1AB9100}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1872DAB-1D96-4910-A38F-EFDFE1AB9100}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1872DAB-1D96-4910-A38F-EFDFE1AB9100}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEA18061-9BE9-4D4E-A174-E0B345AAA76D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEA18061-9BE9-4D4E-A174-E0B345AAA76D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEA18061-9BE9-4D4E-A174-E0B345AAA76D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEA18061-9BE9-4D4E-A174-E0B345AAA76D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
