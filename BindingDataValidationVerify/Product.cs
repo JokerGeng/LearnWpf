@@ -10,6 +10,17 @@ namespace BindingDataValidationVerify
 {
     public class Product : INotifyPropertyChanged, INotifyDataErrorInfo
     {
+        /*
+         *  INotifyDataErrorInfo/IDataErrorInfo
+         *  允许使用非法值，数据会更新，但会标记出来（红框显示控件）
+         */
+
+
+        /*
+         * INotifyDataErrorInfo开关 ValidatesOnNotifyDataErrors=true
+         * IDataErrorInfo ValidatesOnDataErrors=true
+         */
+
         private Dictionary<string, List<string>> errors = new Dictionary<string, List<string>>();
         public bool HasErrors => errors.Count > 0;
 
@@ -23,13 +34,13 @@ namespace BindingDataValidationVerify
 
         public IEnumerable GetErrors(string propertyName)
         {
-            if(string.IsNullOrEmpty(propertyName))
+            if (string.IsNullOrEmpty(propertyName))
             {
                 return errors.Values;
             }
             else
             {
-                if(errors.ContainsKey(propertyName))
+                if (errors.ContainsKey(propertyName))
                 {
                     return errors[propertyName];
                 }
@@ -60,13 +71,13 @@ namespace BindingDataValidationVerify
                 bool valid = true;
                 foreach (char c in modelNumber)
                 {
-                    if(!char.IsLetterOrDigit(c))
+                    if (!char.IsLetterOrDigit(c))
                     {
                         valid = false;
                         break;
                     }
                 }
-                if(!valid)
+                if (!valid)
                 {
                     List<string> errors = new List<string>();
                     errors.Add("The ModelNumber can only contain letters and numbers.");
