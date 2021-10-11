@@ -23,8 +23,9 @@ namespace BindingDataValidationVerify
 
         private Dictionary<string, List<string>> errors = new Dictionary<string, List<string>>();
         public bool HasErrors => errors.Count > 0;
-
         public event EventHandler<DataErrorsChangedEventArgs> ErrorsChanged;
+
+
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged(PropertyChangedEventArgs e)
         {

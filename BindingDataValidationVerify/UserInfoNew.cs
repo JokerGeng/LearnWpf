@@ -51,7 +51,7 @@ namespace BindingDataValidationVerify
             }
             if (!valid)
             {
-                return new ValidationResult(valid, "The ModelNumber can only contain letters and numbers in new userinfo.");
+                return new ValidationResult(valid, "The Account can only contain letters and numbers in new userinfo.");
             }
             return ValidationResult.ValidResult;
         }

@@ -90,7 +90,7 @@ namespace BindingDataValidationVerify
             }
             if(!valid)
             {
-                return new ValidationResult("The ModelNumber can only contain letters and numbers.");
+                return new ValidationResult("The Account can only contain letters and numbers.");
             }
             return ValidationResult.Success;
         }
