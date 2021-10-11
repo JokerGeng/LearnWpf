@@ -31,6 +31,11 @@ namespace BindingDataValidationVerify
         public event PropertyChangedEventHandler PropertyChanged;
     }
 
+    /*
+     *  ValidationRule不允许使用非法值，数据不会更新，会标记出来（红框显示控件）
+     *  错误的数据将不会修改到属性中
+     */
+
     public class AccountValidationRule : ValidationRule
     {
         public override ValidationResult Validate(object value, CultureInfo cultureInfo)
