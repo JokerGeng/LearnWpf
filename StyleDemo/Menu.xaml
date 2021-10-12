@@ -1,0 +1,13 @@
+﻿<Window x:Class="StyleDemo.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StyleDemo"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="Menu" Height="407" Width="238">
+    <StackPanel Margin="5" Button.Click="ButtonClick">
+        <Button>ListStyle</Button>
+        <Button>RadioButtonListStyle</Button>
+    </StackPanel>
+</Window>
