@@ -9,5 +9,9 @@
     <StackPanel Margin="5" Button.Click="ButtonClick">
         <Button>ListStyle</Button>
         <Button>RadioButtonListStyle</Button>
+        <Button>CheckBoxListStyle</Button>
+        <Button>AlternatingStyle</Button>
+        <Button>SelectorStyle</Button>
+        <Button>DataTemplateList</Button>
     </StackPanel>
 </Window>

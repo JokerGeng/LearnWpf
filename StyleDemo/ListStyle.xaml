@@ -8,30 +8,27 @@
         Title="ListStyle" Height="500" Width="347" MinHeight="500">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-            <ListBox Name="lstProducts" Margin="5" DisplayMemberPath="ModelName" AlternationCount="2">
+            <ListBox Name="lstProducts" Margin="5" DisplayMemberPath="ModelName" AlternationCount="2" SnapsToDevicePixels="True">
                 <ListBox.ItemContainerStyle>
-                    <Style TargetType="{x:Type ListBoxItem}">
-                        <Setter Property="Background" Value="LightSteelBlue"/>
-                        <Setter Property="Margin" Value="1"/>
-                        <Setter Property="Padding" Value="5"/>
+                    <Style >
+                        <Setter Property="ListBoxItem.Background" Value="LightSteelBlue"/>
+                        <Setter Property="ListBoxItem.Margin" Value="1"/>
+                        <Setter Property="ListBoxItem.Padding" Value="5"/>
                         <Style.Triggers>
-                            <Trigger Property="ItemsControl.AlternationIndex" Value="1">
-                                <Setter Property="Background" Value="LightBlue" />
-                            </Trigger>
-                            <Trigger Property="IsSelected" Value="True">
-                                <Setter Property="Background" Value="DarkRed"/>
-                                <Setter Property="Foreground" Value="White"/>
+                            <Trigger Property="ListBoxItem.IsSelected" Value="True">
+                                <Setter Property="ListBoxItem.Background" Value="DarkRed"/>
+                                <Setter Property="ListBoxItem.Foreground" Value="White"/>
                             </Trigger>
                         </Style.Triggers>
                     </Style>
@@ -50,26 +47,26 @@
         <Border Grid.Row="2" Padding="7" Margin="7" Background="LightSteelBlue">
             <Grid DataContext="{Binding ElementName=lstProducts, Path=SelectedItem}">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
                 <TextBlock Margin="7">Model Number:</TextBlock>
-                <TextBox Margin="5" Grid.Column="1" Text="{Binding Path=ModelNumber}"></TextBox>
+                <TextBox Margin="5" Grid.Column="1" Text="{Binding Path=ModelNumber}"/>
                 <TextBlock Margin="7" Grid.Row="1">Model Name:</TextBlock>
-                <TextBox Margin="5" Grid.Row="1" Grid.Column="1" Text="{Binding Path=ModelName}"></TextBox>
+                <TextBox Margin="5" Grid.Row="1" Grid.Column="1" Text="{Binding Path=ModelName}"/>
                 <TextBlock Margin="7" Grid.Row="2">Unit Cost:</TextBlock>
-                <TextBox Margin="5" Grid.Row="2" Grid.Column="1" Text="{Binding Path=UnitCost}"></TextBox>
+                <TextBox Margin="5" Grid.Row="2" Grid.Column="1" Text="{Binding Path=UnitCost}"/>
                 <TextBlock Margin="7,7,7,0" Grid.Row="3">Description:</TextBlock>
                 <TextBox Margin="7" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" 
-                 TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" Text="{Binding Path=Description}"></TextBox>
+                 TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" Text="{Binding Path=Description}"/>
 
 
             </Grid>
