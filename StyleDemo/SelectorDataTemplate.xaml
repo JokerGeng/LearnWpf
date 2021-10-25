@@ -1,0 +1,47 @@
+﻿<Window x:Class="StyleDemo.SelectorDataTemplate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StyleDemo"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="SelectorDataTemplate" Height="450" Width="800">
+    <Window.Resources>
+
+        <DataTemplate x:Key="DefaultTemplate">
+            <Border Margin="5" BorderThickness="1" BorderBrush="SteelBlue" CornerRadius="4">
+                <Grid Margin="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="{Binding Path=ModelNumber}"/>
+                    <TextBlock Text="{Binding Path=ModelName}" Grid.Row="1"/>
+                </Grid>
+            </Border>
+        </DataTemplate>
+
+        <DataTemplate x:Key="HighlightTemplate">
+            <Border Margin="5" BorderThickness="1" BorderBrush="SteelBlue" CornerRadius="4" Background="LightYellow">
+                <Grid Margin="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="{Binding Path=ModelNumber}"/>
+                    <TextBlock Text="{Binding Path=ModelName}" Grid.Row="1"/>
+                    <TextBlock Text="*** Great for vacations ***" FontStyle="Italic" HorizontalAlignment="Right" Grid.Row="2"/>
+                </Grid>
+            </Border>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <ListBox  Name="lstProducts" HorizontalContentAlignment="Stretch" SelectionMode="Single">
+            <ListBox.ItemTemplateSelector>
+                <local:HighLightDataTemplateSelector Default="{StaticResource DefaultTemplate}" HighLightTemplate="{StaticResource HighlightTemplate}"
+                                              EvaluteProperty="CategoryName" EvalutePropertyValue="Travel"/>
+            </ListBox.ItemTemplateSelector>
+        </ListBox>
+    </Grid>
+</Window>

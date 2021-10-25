@@ -12,6 +12,7 @@
         <Button>CheckBoxListStyle</Button>
         <Button>AlternatingStyle</Button>
         <Button>SelectorStyle</Button>
+        <Button>SelectorDataTemplate</Button>
         <Button>DataTemplateList</Button>
     </StackPanel>
 </Window>
